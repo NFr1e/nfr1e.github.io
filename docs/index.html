@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
+  
+</head>
+
+<body>
+  <div id="app"></div>
+  <script>
+    window.$docsify = 
+    {
+      name: 'NFr1e',
+      loadSidebar: true,
+      search: 
+      {
+        paths: 'auto',
+        placeholder: 'Search',              
+        placeholder: 
+        {
+            '/zh-cn/': '搜索',
+            '/': 'Search'
+        },
+        noData: '无结果',
+        depth: 4,
+        hideOtherSidebarContent: false,
+        namespace: 'Docsify-Guide',
+      },
+      pagination: 
+      {
+        previousText: '上一章',
+        nextText: '下一章',
+      },
+      autoFooter: 
+      {
+        name: 'NFr1e',
+        url: 'https://github.com/NFr1e',
+        copyYear: '2026',
+        policy: false,
+        terms: false,
+        cookies: false,
+        customStyle: true
+      } 
+    }
+  </script>
+
+  <!-- Docsify v4 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+
+  <!-- docsify-count -->
+  <script src="//unpkg.com/docsify-count/dist/countable.min.js"></script>
+
+  <!-- docsify-sidebar-footer -->
+  <script src="https://cdn.jsdelivr.net/npm/@markbattistella/docsify-sidebarfooter@latest"></script>
+
+  <!--search-->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+
+  <!--docsify-pagination-->
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination@latest/dist/docsify-pagination.min.js"></script>
+</body>
+</html>
