@@ -1,0 +1,255 @@
+:root {
+  /* 核心颜色 */
+  --nfr-accent: #1f6feb;
+  
+  /* 表面和玻璃态 */
+  --nfr-surface: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(245, 248, 255, 0.98));
+  --nfr-glass: rgba(255, 255, 255, 0.75);
+  
+  /* 阴影和边框 */
+  --nfr-card-border: rgba(15, 23, 42, 0.09);
+  --nfr-card-shadow: 0 20px 50px -10px rgba(15, 23, 42, 0.12);
+  --nfr-card-shadow-hover: 0 28px 60px -12px rgba(31, 111, 235, 0.22);
+  
+  /* 强调色变体 */
+  --nfr-accent-soft: rgba(31, 111, 235, 0.15);
+  --nfr-accent-border: rgba(31, 111, 235, 0.35);
+  --nfr-accent-border-hover: rgba(31, 111, 235, 0.4);
+  --nfr-accent-glow: rgba(31, 111, 235, 0.15);
+  
+  /* 文字颜色 */
+  --nfr-text-soft: rgba(60, 60, 67, 0.82);
+  --nfr-text-primary: #1e2937;
+  --nfr-text-secondary: #334155;
+  
+  /* 过渡动画 */
+  --nfr-transition-smooth: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --nfr-transition-glow: 0.7s;
+}
+
+.home-socials {
+  margin: 24px auto 24px;
+}
+
+.home-socials__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* ==================== 卡片基础样式 - 增强玻璃态 ==================== */
+.home-social-card {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  min-height: auto;
+  padding: 16px 20px;
+  border: 1px solid var(--nfr-card-border);
+  border-radius: 28px;
+  background: var(--nfr-glass);
+  backdrop-filter: blur(16px) saturate(180%);
+  transition: border-color var(--nfr-transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 有链接的卡片 */
+.home-social-card[href] {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.home-social-card[href]:focus-visible {
+  box-shadow: inset 0 0 0 2px var(--nfr-accent);
+}
+
+.home-social-card[href]:hover {
+  border-color: var(--nfr-accent-border);
+}
+
+/* 无链接的卡片（虚线样式） */
+.home-social-card:not([href]) {
+  border-style: dashed;
+  border-color: var(--nfr-accent-soft);
+  background: rgba(255, 255, 255, 0.68);
+}
+
+.home-social-card:not([href]):hover {
+  border-style: solid;
+  border-color: var(--nfr-accent-border-hover);
+}
+
+/* ==================== 图标区域 ==================== */
+.home-social-card__icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  color: var(--nfr-accent);
+  background: rgba(31, 111, 235, 0.08);
+}
+
+.home-social-card__icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* ==================== 内容区域 ==================== */
+.home-social-card__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.home-social-card__title {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--nfr-text-primary);
+}
+
+.home-social-card__value {
+  font-size: 15.5px;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--nfr-text-secondary);
+  word-break: break-word;
+}
+
+/* ==================== 下载卡片样式 - 垂直布局 ==================== */
+.dlsample-cards {
+  margin: 24px auto 24px;
+}
+
+.dlsample-cards__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.dlsample-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+  border: 1px solid var(--nfr-card-border);
+  border-radius: 28px;
+  background: var(--nfr-glass);
+  backdrop-filter: blur(16px) saturate(180%);
+  transition: border-color var(--nfr-transition-smooth);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none !important;
+  color: inherit;
+  cursor: pointer;
+}
+
+.dlsample-card:hover {
+  border-color: var(--nfr-accent-border);
+}
+
+.dlsample-card:focus-visible {
+  outline: 2px solid var(--nfr-accent);
+  outline-offset: 2px;
+}
+
+.dlsample-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 16px;
+  border-radius: 12px;
+  background: rgba(31, 111, 235, 0.08);
+  transition: background-color var(--nfr-transition-smooth);
+}
+
+.dlsample-card:hover .dlsample-card__icon {
+  background: rgba(31, 111, 235, 0.15);
+}
+
+.dlsample-card__icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.dlsample-card__title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--nfr-text-primary);
+  margin: 0;
+}
+
+.dlsample-card__description {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--nfr-text-secondary);
+  margin: 8px 0 0;
+}
+
+/* ==================== 移动端优化 ==================== */
+@media (max-width: 768px) {
+  .home-socials {
+    margin: 40px 16px 24px;
+  }
+
+  .home-socials__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .home-social-card {
+    padding: 20px;
+    min-height: auto;
+    border-radius: 24px;
+  }
+
+  .home-social-card__icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .dlsample-cards {
+    margin: 40px 16px 24px;
+  }
+
+  .dlsample-cards__grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+  }
+
+  .dlsample-card {
+    padding: 24px 16px;
+  }
+
+  .dlsample-card__icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 12px;
+  }
+
+  .dlsample-card__icon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .dlsample-card__title {
+    font-size: 14px;
+  }
+
+  .dlsample-card__description {
+    font-size: 12px;
+  }
+}
