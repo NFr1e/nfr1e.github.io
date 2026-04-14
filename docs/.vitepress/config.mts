@@ -14,7 +14,7 @@ export default defineConfig({
   title: "NFr1e's Docs",
   description: "NFr1e 的静态文档与笔记站点",
   lang: "zh-CN",
-  base: "/",
+  base: "/nfr1e.github.io/",
   cleanUrls: true,
   lastUpdated: true,
   themeConfig: 
