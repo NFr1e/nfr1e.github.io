@@ -18,10 +18,10 @@ DLSample提供了创建关卡的快捷方式，当然也可以根据自己的需
 - `GemCount`关卡宝石数
 - 以上数据会保存到 `<LevelName>/LevelData_<LevelName>`下
 
-![LevelCreator窗口介绍](../../assets/dlsample/ch2_create_level_shortcut_window.png)
+![LevelCreator窗口介绍](../../public/assets/dlsample/ch2_create_level_shortcut_window.png)
 
 3. 创建成功
-![创建成功](../../assets/dlsample/ch2_create_level_shortcut_success.png)
+![创建成功](../../public/assets/dlsample/ch2_create_level_shortcut_success.png)
 
 ## 二.手动创建
 ### 1. 创建场景
@@ -30,7 +30,7 @@ DLSample提供了创建关卡的快捷方式，当然也可以根据自己的需
 ### 2. 创建关卡配置文件
 1. 在1.1创建的文件夹下，右键，找到Create -> DLSample -> Level -> ... , 可以看到LevelData, BeatmapData, PathGrapherAsset三个选项，依次创建。
 
-![手动创建介绍](../../assets/dlsample/ch2_create_level_manually_menu.png)
+![手动创建介绍](../../public/assets/dlsample/ch2_create_level_manually_menu.png)
 
 ## 接下来
 
