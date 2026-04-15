@@ -123,24 +123,24 @@
 }
 
 /* ==================== 下载卡片样式 - 垂直布局 ==================== */
-.dlsample-cards {
+.flex-link-cards {
   margin: 24px auto 24px;
 }
 
-.dlsample-cards__grid {
+.flex-link-card__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 }
 
-.dlsample-card {
+.flex-link-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 32px 20px;
   border: 1px solid var(--nfr-card-border);
-  border-radius: 28px;
+  border-radius: 18px;
   background: var(--nfr-glass);
   backdrop-filter: blur(16px) saturate(180%);
   transition: border-color var(--nfr-transition-smooth);
@@ -152,16 +152,16 @@
   cursor: pointer;
 }
 
-.dlsample-card:hover {
+.flex-link-card:hover {
   border-color: var(--nfr-accent-border);
 }
 
-.dlsample-card:focus-visible {
+.flex-link-card:focus-visible {
   outline: 2px solid var(--nfr-accent);
   outline-offset: 2px;
 }
 
-.dlsample-card__icon {
+.flex-link-card__icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -173,17 +173,17 @@
   transition: background-color var(--nfr-transition-smooth);
 }
 
-.dlsample-card:hover .dlsample-card__icon {
+.flex-link-card:hover .flex-link-card__icon {
   background: rgba(31, 111, 235, 0.15);
 }
 
-.dlsample-card__icon img {
+.flex-link-card__icon img {
   width: 32px;
   height: 32px;
   object-fit: contain;
 }
 
-.dlsample-card__title {
+.flex-link-card__title {
   font-size: 16px;
   font-weight: 700;
   line-height: 1.3;
@@ -191,7 +191,7 @@
   margin: 0;
 }
 
-.dlsample-card__description {
+.flex-link-card__description {
   font-size: 13px;
   font-weight: 500;
   line-height: 1.4;
@@ -221,35 +221,146 @@
     height: 50px;
   }
 
-  .dlsample-cards {
+  .flex-link-card {
     margin: 40px 16px 24px;
   }
 
-  .dlsample-cards__grid {
+  .flex-link-card__grid {
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 16px;
   }
 
-  .dlsample-card {
+  .flex-link-card {
     padding: 24px 16px;
   }
 
-  .dlsample-card__icon {
+  .flex-link-card__icon {
     width: 64px;
     height: 64px;
     margin-bottom: 12px;
   }
 
-  .dlsample-card__icon img {
-    width: 40px;
-    height: 40px;
+  .flex-link-card__icon img {
+    width: 32px;
+    height: 32px;
   }
 
-  .dlsample-card__title {
+  .flex-link-card__title {
     font-size: 14px;
   }
 
-  .dlsample-card__description {
+  .flex-link-card__description {
+    font-size: 12px;
+  }
+}
+
+/* ==================== 左图右文卡片样式 ==================== */
+.side-link-cards {
+  margin: 12px auto 12px;
+}
+
+.side-link-card__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.side-link-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 12px 10px;
+  border: 1px solid var(--nfr-card-border);
+  border-radius: 18px;
+  background: var(--nfr-glass);
+  backdrop-filter: blur(16px) saturate(180%);
+  transition: border-color var(--nfr-transition-smooth);
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  text-decoration: none !important;
+  color: inherit;
+  cursor: pointer;
+}
+
+.side-link-card:hover {
+  border-color: var(--nfr-accent-border);
+}
+
+.side-link-card:focus-visible {
+  outline: 2px solid var(--nfr-accent);
+  outline-offset: 2px;
+}
+
+.side-link-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  border-radius: 12px;
+  background: rgba(31, 111, 235, 0.08);
+  transition: background-color var(--nfr-transition-smooth);
+}
+
+.side-link-card:hover .side-link-card__icon {
+  background: rgba(31, 111, 235, 0.15);
+}
+
+.side-link-card__icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.side-link-card__content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.side-link-card__title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--nfr-text-primary);
+  margin: 0;
+}
+
+.side-link-card__description {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--nfr-text-secondary);
+  margin: 8px 0 0;
+}
+
+@media (max-width: 640px) {
+  .side-link-card__grid {
+    gap: 16px;
+  }
+
+  .side-link-card {
+    padding: 20px 16px;
+  }
+
+  .side-link-card__icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+  }
+
+  .side-link-card__icon img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .side-link-card__title {
+    font-size: 14px;
+  }
+
+  .side-link-card__description {
     font-size: 12px;
   }
 }

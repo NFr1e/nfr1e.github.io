@@ -7,14 +7,17 @@ hero:
   actions:
     - theme: brand
       text: 开始阅读
-      link: /guide/dl-sample/ch1_start.md
+      link: /docs/dl-sample/ch1_start.md
 
 features:
-  - title: 节拍驱动的关卡组织方式
+  - icon: 🥁
+    title: 节拍驱动的关卡组织方式
     details: 节拍时间轴与角色移动路径之间建立了直观映射，显著降低关卡的制作成本，使创作者专注于关卡设计。
-  - title: 完善的编辑器工具链
+  - icon: ⚒️
+    title: 完善的编辑器工具链
     details: 包含LevelCreator, PathGrapher, PathBuilder等编辑器工具
-  - title: 模块化 Gameplay 生命周期管理
+  - icon: 📦
+    title: 模块化 Gameplay 生命周期管理
     details: 模块解耦，适合后续扩展新玩法或替换某个子系统。
 ---
 
@@ -55,7 +58,7 @@ const downloadCards = [
 </script>
 
 ## 📥 模板获取
-<DLSampleCards :cards="downloadCards" />
+<FlexLinkCard :cards="downloadCards" />
 
 ## 💾 项目仓库
-<DLSampleCards :cards="openSourceCards"/>
+<SideLinkCard :cards="openSourceCards"/>

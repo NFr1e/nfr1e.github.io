@@ -13,7 +13,9 @@ cd DLSample-Remastered
 打开UnityHub, 在`项目`页面下，点击`添加 > 从磁盘添加项目` 即可在UnityHub中添加项目。
 
 ### Unity版本
+::: warning 注意
 项目使用 [InputSystem](https://docs.unity3d.com/Manual/com.unity.inputsystem.html), [UI Toolkit](https://docs.unity3d.com/Manual/UIElements.html)等较新特性，不同Unity版本可能出现API不兼容等情况。
+:::
 
 - 最低版本 Unity 2019.4
 

@@ -1,18 +1,5 @@
 import { defineConfig } from "vitepress";
-
-const pagesLink = {
-  home: "/",
-
-  dlsample: "/guide/dl-sample",
-  dlsample_ch1: "/guide/dl-sample/ch1_start",
-  dlsample_ch2: "/guide/dl-sample/ch2_sampleScene",
-  dlsample_ch3: "/guide/dl-sample/ch3_createLevel",
-  dlsample_ch4: "/guide/dl-sample/ch4_collectables",
-  dlsample_ch5: "/guide/dl-sample/ch5_beatmapData",
-  dlsample_ch6: "/guide/dl-sample/ch6_pathGrapher",
-
-  notes: "/notes/"
-} as const;
+import { navLinks, docsSidebar } from "./paths";
 
 export default defineConfig({
   title: "NFr1e's Docs",
@@ -22,40 +9,20 @@ export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
 
-  themeConfig: 
-  {
+  themeConfig: {
     siteTitle: "NFr1e's Docs",
-    nav: [
-      { text: "首页", link: pagesLink.home },
-      { text: "文档", link: pagesLink.dlsample },
-      { text: "笔记", link: pagesLink.notes }
-    ],
-    sidebar: [
-      {
-        text: "文档",
-        items: [
-          { text: "DLSample", link: pagesLink.dlsample },
-          { text: "快速开始", link: pagesLink.dlsample_ch1 },
-          { text: "示例场景", link: pagesLink.dlsample_ch2 },
-          { text: "创建关卡", link: pagesLink.dlsample_ch3 },
-          { text: "收集物", link: pagesLink.dlsample_ch4 },
-          { text: "关卡踩音", link: pagesLink.dlsample_ch5 },
-          { text: "PathGrapher", link: pagesLink.dlsample_ch6 }
-        ]
-      },
-      {
-        text: "笔记",
-        items: [
-          { text: "首页", link: pagesLink.notes },
-        ]
-      }
-    ],
+    nav: navLinks,
+    sidebar: docsSidebar,
     footer: {
       message: "Powered by VitePress",
       copyright: "Copyright (c) 2026 NFr1e"
     },
     search: {
       provider: 'local'
-    }
+    },
+    outline: {
+      level: [2, 3],        // 显示 <h2> 到 <h4> 的标题（常用）
+      label: '页面导航',     // 大纲标题文本（默认是 "On this page" 或中文 "在本页"）
+    },
   }
 });
