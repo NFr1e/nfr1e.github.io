@@ -24,7 +24,7 @@ cd DLSample-Remastered
 - `LevelRestarter`中使用的`UnityEngine.SceneManagement`中的`SceneManager.loadedSceneCount`API在旧版本中未被加入。
 
 ### 付费插件
-部分插件可能需要手动安装以保证项目正常运行
+部分插件可能需要手动安装以保证项目正常运行：
 - [Odin Inspector](https://odininspector.com/) 编辑器拓展
 
 ## 三.项目结构
@@ -43,5 +43,5 @@ DLSample/
 
 ## 接下来
 
-1. 如果项目不能正常打开或`Console`存在编译错误，请检查上文`已知兼容问题`以及`付费插件`
+1. 如果项目不能正常打开或Console存在编译错误，请检查上文`已知兼容问题`以及`付费插件`。
 2. 确保项目正常打开且无编译错误后，请进入`Assets/DLSample/Levels/_Sample/SampleLevel`场景，试试运行时是否正常工作。

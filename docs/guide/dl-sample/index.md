@@ -54,8 +54,8 @@ const downloadCards = [
 ];
 </script>
 
-## 💾 项目仓库
-<DLSampleCards :cards="openSourceCards"/>
-
 ## 📥 模板获取
 <DLSampleCards :cards="downloadCards" />
+
+## 💾 项目仓库
+<DLSampleCards :cards="openSourceCards"/>
