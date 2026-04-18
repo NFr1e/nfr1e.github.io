@@ -21,8 +21,12 @@ export default defineConfig({
       provider: 'local'
     },
     outline: {
-      level: [2, 3],        // 显示 <h2> 到 <h4> 的标题（常用）
-      label: '页面导航',     // 大纲标题文本（默认是 "On this page" 或中文 "在本页"）
+      level: [2, 3],
+      label: '页面导航',
     },
+    docFooter: {
+      prev: '上一节',
+      next: '下一节'
+    }
   }
 });

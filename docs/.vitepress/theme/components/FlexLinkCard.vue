@@ -19,6 +19,7 @@ withDefaults(defineProps<Props>(), {});
 <template>
   <div class="flex-link-cards">
     <div class="flex-link-card__grid">
+
       <component
         :is="card.href ? 'a' : 'div'"
         v-for="(card, index) in cards"
@@ -37,6 +38,7 @@ withDefaults(defineProps<Props>(), {});
         <div class="flex-link-card__title">{{ card.title }}</div>
         <div class="flex-link-card__description">{{ card.description }}</div>
       </component>
+      
     </div>
   </div>
 </template>

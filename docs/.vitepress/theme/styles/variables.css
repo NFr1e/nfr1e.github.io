@@ -1,0 +1,28 @@
+:root {
+  /* 核心颜色 */
+  --nfr-accent: #1f6feb;
+  
+  /* 表面和玻璃态 */
+  --nfr-surface: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(245, 248, 255, 0.98));
+  --nfr-glass: rgba(255, 255, 255, 0.75);
+  
+  /* 阴影和边框 */
+  --nfr-card-border: rgba(15, 23, 42, 0.09);
+  --nfr-card-shadow: 0 20px 50px -10px rgba(15, 23, 42, 0.12);
+  --nfr-card-shadow-hover: 0 12px 30px -8px rgba(31, 111, 235, 0.22);
+  
+  /* 强调色变体 */
+  --nfr-accent-soft: rgba(31, 111, 235, 0.15);
+  --nfr-accent-border: rgba(31, 111, 235, 0.35);
+  --nfr-accent-border-hover: rgba(31, 111, 235, 0.4);
+  --nfr-accent-glow: rgba(31, 111, 235, 0.15);
+  
+  /* 文字颜色 */
+  --nfr-text-soft: rgba(60, 60, 67, 0.82);
+  --nfr-text-primary: #1e2937;
+  --nfr-text-secondary: #334155;
+  
+  /* 过渡动画 */
+  --nfr-transition-smooth: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --nfr-transition-glow: 0.7s;
+}

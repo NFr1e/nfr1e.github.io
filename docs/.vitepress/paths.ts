@@ -19,12 +19,14 @@ export const pagesLink = {
   notes: "/notes/"
 } as const;
 
+//—————————— 导航栏 ——————————
 export var navLinks = [
   { text: "🏠 首页", link: pagesLink.home },
   { text: "📄 文档", link: pagesLink.docs },
   { text: "📒 笔记", link: pagesLink.notes }
 ];
 
+//—————————— 侧边栏 ——————————
 export var docsSidebar = [
   {
     text: "文档",

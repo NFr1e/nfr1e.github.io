@@ -18,4 +18,36 @@ hero:
 ---
 
 ## 📫社交帐号
-<HomeSocialCards/>
+<script setup>
+const socialCards = [
+  {
+    title: "GitHub",
+    description: "@NFr1e",
+    icon: "/assets/icons/github.png",
+    iconType: "url",
+    href: "https://github.com/NFr1e/"
+  },
+  {
+    title: "哔哩哔哩",
+    description: "@NFr1e",
+    icon: "/assets/icons/bilibili.png",
+    iconType: "url",
+    href: "https://space.bilibili.com/291841883"
+  },
+  {
+    title: "Steam",
+    description: "w3aver",
+    icon: "/assets/icons/steam.png",
+    iconType: "url",
+    href: "https://steamcommunity.com/id/nfr1e"
+  },
+  {
+    title: "邮箱",
+    description: "3162205763@qq.com",
+    icon: "/assets/icons/mail.png",
+    iconType: "url"
+  }
+];
+</script>
+
+<SideLinkCard :cards="socialCards" />
