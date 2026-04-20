@@ -15,7 +15,7 @@ export default defineConfig({
     sidebar: docsSidebar,
     footer: {
       message: "Powered by VitePress",
-      copyright: "Copyright (c) 2026 NFr1e"
+      copyright: "© 2026 NFr1e"
     },
     search: {
       provider: 'local'

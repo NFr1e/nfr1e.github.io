@@ -47,14 +47,28 @@ PathGrapher是DLSample提供的路径可视化编辑工具，它依据：
 4. 路径编辑请在Inspector面板中开启`EnableEventCreator`，鼠标在路径上滑动时会出现一个“小球”，此时单击鼠标右键，即可创建路径事件。
 
 ### 路径事件的运行时同步
+> PathGrapher上编辑的事件可以通过`PathGrapherEventsSyncer`组件同步到运行时。
+
 在挂载了PathGrapherBehaviour组件的物体或一个空物体上添加`PathGrapherEventsSyncer`组件，填入当前关卡的`PathGrapherAsset`，即可在运行时自动将PathGrapher上创建的事件注册到`GameplayTimer`中。
 
-### PathBuilder
-DLSample基于PathGrapher提供了路径生成器，可以一键铺设路径和引导线。
-使用方法: 在Unity顶部工具栏找到DLSample -> PathBuilder，填入PathGrapherAsset以及对应预制体等参数，点击按钮即可生成。
+### 路径生成器
+> DLSample基于PathGrapher提供了路径生成器，可以一键铺设路径和引导线。
 
-### 工具组件
-#### PathGrapherTransformMover
+1. 在Unity顶部工具栏打开DLSample -> PathBuilder
+2. 在Source栏中填入当前关卡的PathGrapherAsset文件
+3. Path部分有
+   - `PathPrefab`:路径预制体
+   - `PathWidth`:路径宽度
+   - `GenerateType`:路径生成模式。包含`Connected`和`Disconnected`两种模式。其中`Connected`模式即为路径首尾相连，转向部分有重合；`Disconnected`模式反之。
+   - 生成的路径高度为预制体高度。
+4. HintLine部分有
+   - `HintBoxPrefab`:引导框预制体
+   - `HintSegmentPrefab`:引导线虚线段预制体
+5. 相应参数设置完成后，点击`Generate`按钮即可生成路径。
+
+### PathGrapherTransformMover
+> PathGrapherTransformMover是根据时间和路径数据确定世界空间下的位置，旋转等数据，并将其运用到场景中的游戏对象上的组件
+
 在物体上挂载`PathGrapherTransformMover`工具组件，即可：
 1. 根据物体位置获得当前物体在路径上对应的时间点
 2. 根据填入的时间点调整物体位置至路径上的标准位置

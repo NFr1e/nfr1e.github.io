@@ -5,7 +5,6 @@
 在项目根目录运行：
 ```bash
 git clone https://github.com/NFr1e/DLSample-Remastered.git
-cd DLSample-Remastered
 ```
 
 ## 二.在Unity编辑器中打开

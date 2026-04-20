@@ -57,8 +57,8 @@ const downloadCards = [
 ];
 </script>
 
-## 📥 模板获取
+## 模板获取
 <FlexLinkCard :cards="downloadCards" />
 
-## 💾 项目仓库
+## 项目仓库
 <SideLinkCard :cards="openSourceCards"/>

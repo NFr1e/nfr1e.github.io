@@ -16,8 +16,6 @@
 
   border: 1px solid var(--nfr-card-border);
   border-radius: 18px;
-  
-  background: var(--nfr-glass);
 
   transition: 
     border-color var(--nfr-transition-smooth),

@@ -17,8 +17,18 @@ hero:
       link: https://github.com/NFr1e/nfr1e.github.io
 ---
 
-## 📫社交帐号
 <script setup>
+const skillsCards ={
+
+}
+
+const swuCard = {
+  schoolName: "西南大学",
+  major: "软件工程",
+  period: "Sep 2024 - Present",
+  logoUrl: 'assets/icons/swu.png'
+}
+
 const socialCards = [
   {
     title: "GitHub",
@@ -48,6 +58,40 @@ const socialCards = [
     iconType: "url"
   }
 ];
+
+const skillTags = [
+  {
+    title: 'Fronted',
+    items:[
+      'HTML','CSS','JavaScript','Vue'
+    ]
+  },
+  {
+    title: 'Programming',
+    items:[
+      '.NET','JavaSE'
+    ]
+  },
+  {
+    title: 'GameEngine',
+    items:[
+      'Unity','Godot'
+    ]
+  },
+  {
+    title: 'Tools',
+    items:[
+      'VisualStudio','VSCode','Git'
+    ]
+  }
+];
 </script>
 
-<SideLinkCard :cards="socialCards" />
+## Edu
+<EduCard v-bind="swuCard" />
+
+## Skills
+<TagList :tags="skillTags"/>
+
+## Links
+<FlexLinkCard :cards="socialCards" />

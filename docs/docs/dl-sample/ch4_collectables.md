@@ -1,13 +1,16 @@
 # 收集物
-DLSample提供了`宝石`和`皇冠`两种基础收集物。
+DLSample提供了宝石和皇冠两种基础收集物。
 
 ## 一.宝石
 在`DLSample/Resources/Prefabs`下找到`Gem`预制体，直接拖入场景即可使用。
 
-如果出现**无法拾取**的情况，请检查角色是否添加了`TriggeryCollector`组件和`Rigidbody`组件(详见第二节“[示例场景](ch2_sampleScene.md)”)。
+如果出现**无法拾取**的情况，请检查:
+1. 角色是否添加了`TriggeryCollector`组件和`Rigidbody`组件(详见第二节“[示例场景](ch2_sampleScene.md)”)。
+2. 宝石是否添加了`Collider`组件，并且勾选了`IsTrigger`。
+3. 宝石物体的Layer是否在`TriggeryCollector`的`ExcludeLayers`中。
 
 ## 二.皇冠
-DLSample中，皇冠默认只能通过**检查点**拾取。在`DLSample/Resources/Prefabs`下找到`CrownCheckpoint`预制体，拖入场景中。
+DLSample中，皇冠默认只能通过**检查点**拾取。DLSample提供了皇冠检查点，在`DLSample/Resources/Prefabs`下找到`CrownCheckpoint`预制体，拖入场景中。
 
 ### 皇冠检查点
 皇冠检查点上挂载了`CrownCheckpoint`组件，可能还有`PathGrapherTransformMover`组件(详见[PathGrapher](ch6_pathGrapher.md))。此处仅介绍`CrownCheckpoint`组件。

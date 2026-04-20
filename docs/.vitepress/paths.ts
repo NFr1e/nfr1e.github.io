@@ -12,6 +12,7 @@ export const pagesLink = {
   dlsample_ch4: "/docs/dl-sample/ch4_collectables",
   dlsample_ch5: "/docs/dl-sample/ch5_beatmapData",
   dlsample_ch6: "/docs/dl-sample/ch6_pathGrapher",
+  dlsample_ch8: "/docs/dl-sample/ch8_advanced",
 
   mvzick: "/docs/mvzick",
 
@@ -21,9 +22,9 @@ export const pagesLink = {
 
 //—————————— 导航栏 ——————————
 export var navLinks = [
-  { text: "🏠 首页", link: pagesLink.home },
-  { text: "📄 文档", link: pagesLink.docs },
-  { text: "📒 笔记", link: pagesLink.notes }
+  { text: "首页", link: pagesLink.home },
+  { text: "文档", link: pagesLink.docs },
+  { text: "笔记", link: pagesLink.notes }
 ];
 
 //—————————— 侧边栏 ——————————
@@ -44,7 +45,8 @@ export var docsSidebar = [
           { text: "创建关卡", link: pagesLink.dlsample_ch3 },
           { text: "收集物", link: pagesLink.dlsample_ch4 },
           { text: "关卡踩音", link: pagesLink.dlsample_ch5 },
-          { text: "PathGrapher", link: pagesLink.dlsample_ch6 }
+          { text: "PathGrapher", link: pagesLink.dlsample_ch6 },
+          { text: "进阶", link: pagesLink.dlsample_ch8 }
         ]
       },
       {
