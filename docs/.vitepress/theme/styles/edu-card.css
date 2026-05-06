@@ -2,11 +2,16 @@
 .edu-card {
   /* background: #f1f2f3; */
 
+  width: 100%;
+  max-width: 100%;
   border: 1px solid #dedfe2;
   border-radius: 18px;
 
   overflow: hidden;
   display: flex;
+  align-items: center;
+  min-width: 0;
+  gap: 1rem;
 
   transition: border-color var(--nfr-transition-smooth),
               box-shadow var(--nfr-transition-smooth);
@@ -19,7 +24,8 @@
 
 .edu-card__content {
   flex: 1;
-  padding: 16px 24px 16px 24px;
+  min-width: 0;
+  padding: 16px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -49,6 +55,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  flex-shrink: 0;
 }
 
 .edu-card__logo {
@@ -58,9 +65,37 @@
   position: relative;
   z-index: 10;
   filter: drop-shadow(0 1px 2px rgba(0,0,0,0.05));
+  max-width: 100%;
 }
 
 @media (max-width: 520px) {
-  .edu-card { flex-direction: column; }
-  .edu-card__logo-wrap { width: 100%; border-left: none; border-top: 1px solid #f3f4f6; }
+  .edu-card {
+    flex-wrap: nowrap;
+  }
+
+  .edu-card__content {
+    padding: 12px 16px;
+  }
+
+  .edu-card__logo-wrap {
+    width: 7rem;
+    padding: 0 12px 0 0;
+  }
+
+  .edu-card__logo {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .edu-card__school {
+    font-size: 16px;
+  }
+
+  .edu-card__major {
+    font-size: 13px;
+  }
+
+  .edu-card__period {
+    font-size: 11px;
+  }
 }

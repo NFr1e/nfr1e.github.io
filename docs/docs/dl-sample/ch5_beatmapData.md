@@ -32,3 +32,5 @@ DLSample提供了两种踩音方式：手动踩音和谱面导入。最终踩音
     - `ChartFile` : 谱面文件的文本资产
     - `BeatmapData` : 当前关卡的BeatmapData文件
 3. 点击`Read`即可读取并保存节拍数据至当前BeatmapData
+
+*目前版本中已知存在偏移问题，预计在Indev-6050-b中增加offset参数用于调整

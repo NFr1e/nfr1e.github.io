@@ -69,7 +69,7 @@ const skillTags = [
   {
     title: 'Programming',
     items:[
-      '.NET','JavaSE'
+      '.NET','JavaEE'
     ]
   },
   {
@@ -87,7 +87,7 @@ const skillTags = [
 ];
 </script>
 
-## Edu
+## Education
 <EduCard v-bind="swuCard" />
 
 ## Skills
